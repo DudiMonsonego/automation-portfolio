@@ -14,11 +14,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install pytest pytest-playwright pytest-html requests pytest-base-url
           playwright install --with-deps
 
       - name: Create Reports Directory
         run: mkdir -p reports/screenshots
 
       - name: Run tests
-        run: python -m pytest --html=reports/report.html --self-contained-html
+        run: python -m pytest --headless --html=reports/report.html --self-contained-html
