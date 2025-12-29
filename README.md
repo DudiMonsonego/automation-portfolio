@@ -111,7 +111,8 @@ The framework is designed to provide maximum visibility when a test fails. Using
 3. Embeds the screenshot directly into the HTML report for quick debugging.
 
 **Example of an automated failure screenshot from CI:**
-![Test Failure Screenshot](./assets/failure_screenshot.png)
+![Failure Screenshot](assets/failure_screenshot.png)
+
 
 ---
 
