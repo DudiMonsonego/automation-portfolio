@@ -14,6 +14,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install pytest pytest-playwright pytest-html requests pytest-base-url
           playwright install --with-deps
 
@@ -21,11 +22,12 @@ jobs:
         run: mkdir -p reports/screenshots
 
       - name: Run tests
-        run: python -m pytest --headless --html=reports/report.html --self-contained-html
-        continue-on-error: true # מאפשר להמשיך לשלב השמירה גם אם הטסט נכשל
+        # הרצה ללא הדגל הבעייתי בתוך הפקודה, כי הגדרנו אותו ב-ini
+        run: python -m pytest --html=reports/report.html --self-contained-html
+        continue-on-error: true
 
       - name: Upload Test Report
-        if: always() # מבטיח שהדוח יישמר גם אם היו שגיאות
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: test-report
