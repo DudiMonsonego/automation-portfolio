@@ -22,12 +22,11 @@ jobs:
         run: mkdir -p reports/screenshots
 
       - name: Run tests
-        # הרצה ללא הדגל הבעייתי בתוך הפקודה, כי הגדרנו אותו ב-ini
+        # הורדנו את ה-continue-on-error כדי שזה יצבע באדום כשצריך
         run: python -m pytest --html=reports/report.html --self-contained-html
-        continue-on-error: true
 
       - name: Upload Test Report
-        if: always()
+        if: always() # זה הקוד הקריטי! הוא אומר: "תעלה דוח גם אם הטסט נכשל"
         uses: actions/upload-artifact@v4
         with:
           name: test-report
