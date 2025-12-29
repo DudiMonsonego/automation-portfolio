@@ -1,18 +1,24 @@
 name: Run Tests
-on: [push]
+on: [push, pull_request]
+
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.11'
+
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          playwright install-deps
-          playwright install
+          playwright install --with-deps
+
+      - name: Create Reports Directory
+        run: mkdir -p reports/screenshots
+
       - name: Run tests
-        run: pytest
+        run: python -m pytest --html=reports/report.html --self-contained-html
