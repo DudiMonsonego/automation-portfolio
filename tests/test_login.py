@@ -17,7 +17,7 @@ def test_full_purchase_flow(page):
     
     # 3. Move to cart
     inventory.go_to_cart()
-    assert "/cart.html" in page.url
+    assert "/wrong-page.html" in page.url
 
 @pytest.mark.parametrize("item_name", ["sauce-labs-backpack", "sauce-labs-bike-light"])
 def test_add_multiple_items(page, login_page, inventory_page, item_name):
