@@ -1,0 +1,10 @@
+
+git add assets/
+git commit -m "feat: upload assets folder with failure screenshot"
+git push origin mainMerge branch 'main' of https://github.com/DudiMonsonego/automation-portfolio
+#D
+Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting  '#' will be ignore
+# the commit.
