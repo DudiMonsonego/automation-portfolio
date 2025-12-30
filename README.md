@@ -38,15 +38,6 @@ playwright install
 python -m pytest --html=reports/report.html --self-contained-html
 
 
-הקובץ נראה מצוין ב-VS Code, אבל הבעיה היא שלפי ה-Screenshot האחרון שלך, חסר "תיחום" (Fencing). ב-Markdown, כדי שגיטהאב יציג קטעי קוד או מבנה תיקיות בתוך תיבה אפורה ויפה, צריך לעטוף אותם בסימנים מיוחדים.
-
-הנה מה שחסר לך כדי שה-README יפסיק להיראות כמו "טקסט רגיל" ויהפוך למקצועי:
-
-1. מה להוסיף (התיקון)
-מתחת לכותרת ## 🚀 Getting Started, אתה צריך לעטוף את הפקודות ב-3 גרשיים הפוכים (backticks). אותו דבר לגבי מבנה התיקיות.
-
-פשוט תעתיק את כל הטקסט הבא ותחליף את כל מה שיש לך ב-README.md:
-
 Markdown
 # Advanced Python Automation Framework 🚀
 
