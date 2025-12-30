@@ -38,22 +38,6 @@ playwright install
 python -m pytest --html=reports/report.html --self-contained-html
 ---
 
-
-## 🚀 Getting Started: Setup & Execution
-
-```bash
-# 1. Clone the repo
-git clone [https://github.com/DudiMonsonego/automation-portfolio.git](https://github.com/DudiMonsonego/automation-portfolio.git)
-cd automation-portfolio
-
-# 2. Install dependencies
-pip install -r requirements.txt
-playwright install
-
-# 3. Execute tests and generate report
-python -m pytest --html=reports/report.html --self-contained-html
----
-
 📊 Project Structure & Files
  automation-portfolio/
 ├── .github/workflows/      # CI/CD pipeline configuration (GitHub Actions)
